@@ -1,5 +1,6 @@
 import { Slot, Stack } from "expo-router";
 import { NativeWindStyleSheet } from "nativewind";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
 NativeWindStyleSheet.setOutput({
     default: "native",
@@ -27,6 +28,12 @@ const InitialLayout = () => {
 };
 
 export default function RootLayout({}) {
+    const queryClient = new QueryClient();
     /* Aqui van los providers. */
-    return <InitialLayout />;
+
+    return (
+        <QueryClientProvider client={queryClient}>
+            <InitialLayout />
+        </QueryClientProvider>
+    );
 }
