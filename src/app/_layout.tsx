@@ -17,11 +17,12 @@ const InitialLayout = () => {
             ></Stack.Screen>
             <Stack.Screen
                 name="(main)/products/index"
-                options={{ title: "" }}
+                options={{ title: "", presentation: "modal" }}
             ></Stack.Screen>
             <Stack.Screen
                 name="(main)/products/[id]"
-                options={{ title: "Product Details" }}
+                options={{ title: "Product Details",}}
+                
             ></Stack.Screen>
         </Stack>
     );
