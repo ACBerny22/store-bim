@@ -1,6 +1,7 @@
 import { Slot, Stack } from "expo-router";
 import { NativeWindStyleSheet } from "nativewind";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import Toast from "react-native-toast-message";
 
 NativeWindStyleSheet.setOutput({
     default: "native",
@@ -21,8 +22,7 @@ const InitialLayout = () => {
             ></Stack.Screen>
             <Stack.Screen
                 name="(main)/products/[id]"
-                options={{ title: "Product Details",}}
-                
+                options={{ title: "Product Details" }}
             ></Stack.Screen>
         </Stack>
     );
@@ -35,6 +35,7 @@ export default function RootLayout({}) {
     return (
         <QueryClientProvider client={queryClient}>
             <InitialLayout />
+            <Toast />
         </QueryClientProvider>
     );
 }

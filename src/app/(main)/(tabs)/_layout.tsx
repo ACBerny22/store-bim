@@ -2,8 +2,10 @@ import { Slot, Tabs } from "expo-router";
 import HomeHeader from "../../../components/headers/HomeHeader";
 import { Entypo } from "@expo/vector-icons";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import { useCartStore } from "../../../lib/store";
 
 export default function App() {
+    const { countItems } = useCartStore();
     return (
         <Tabs
             screenOptions={{
@@ -32,6 +34,7 @@ export default function App() {
                 name="cart"
                 options={{
                     title: "Cart",
+                    tabBarBadge: countItems(),
                     tabBarActiveTintColor: "#542678",
                     tabBarIcon: ({ color }) => (
                         <AntDesign

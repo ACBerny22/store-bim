@@ -17,7 +17,7 @@ interface PopProdCardProps {
 export default function PopProdCard({ product }: PopProdCardProps) {
     return (
         <View
-            className="flex flex-col justify-evenly items-center p-10 rounded-xl bg-white mr-5"
+            className="flex flex-col justify-evenly items-center p-5 rounded-xl bg-white mr-5"
             style={{ gap: 18 }}
             key={product.id}
         >
@@ -33,6 +33,7 @@ export default function PopProdCard({ product }: PopProdCardProps) {
                         width: 120,
                         height: 150,
                     }}
+                    resizeMode="contain"
                 ></Image>
                 <Text className="text-lg font-semibold ">
                     {product.title.slice(0, 20)}
