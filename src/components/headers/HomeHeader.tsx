@@ -12,7 +12,7 @@ export default function HomeHeader() {
             </View>
             <View className="flex bg-slate-100 flex-row items-center px-3 pt-2 justify-between">
                 <Text className="text-3xl font-bold">Welcome Back!!</Text>
-                <Ionicons name="notifications" size={24} color="black" />
+                <Ionicons name="notifications" size={28} color="black" />
             </View>
         </SafeAreaView>
     );

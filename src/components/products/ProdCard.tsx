@@ -34,19 +34,21 @@ export default function ProdCard({ product }: PopProdCardProps) {
             </View>
             <View className="flex flex-col" style={{ gap: 20 }}>
                 <View className="">
-                    <Text className="text-lg font-semibold ">
+                    <Text className="text-lg">
                         {product.title.slice(0, 20)}
                     </Text>
-                    <Text className="text-2xl text-start">
+                    <Text className="text-2xl text-start font-bold">
                         ${product.price}
                     </Text>
-                    <Text
-                        className="text-zinc-500 flex items-center justify-start"
+                    <View
+                        className="flex flex-row items-center justify-start"
                         style={{ gap: 5 }}
                     >
-                        <AntDesign name="star" size={12} />
-                        {product.rating.rate}
-                    </Text>
+                        <AntDesign name="star" size={12} color={"#71717a"} />
+                        <Text className="text-zinc-500 ">
+                            {product.rating.rate}
+                        </Text>
+                    </View>
                 </View>
                 <View className="flex">
                     <View className="">

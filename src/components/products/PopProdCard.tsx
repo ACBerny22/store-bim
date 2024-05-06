@@ -35,12 +35,12 @@ export default function PopProdCard({ product }: PopProdCardProps) {
                     }}
                     resizeMode="contain"
                 ></Image>
-                <Text className="text-lg font-semibold ">
+                <Text className="text-lg ">
                     {product.title.slice(0, 20)}
                 </Text>
             </View>
             <View className="">
-                <Text className="text-2xl text-center">${product.price}</Text>
+                <Text className="text-2xl text-center font-bold">${product.price}</Text>
                 <Text
                     className="text-zinc-500 flex items-center justify-center text-center"
                     style={{ gap: 5 }}
