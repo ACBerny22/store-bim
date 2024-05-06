@@ -4,7 +4,7 @@ import { SafeAreaView, ScrollView } from "react-native";
 import { Link, useFocusEffect } from "expo-router";
 import { useQuery } from "@tanstack/react-query";
 import { useCallback } from "react";
-import PopProdCard from "../../../components/products/PopProdCard";
+import PopProdCard from "../../../../components/products/PopProdCard";
 
 async function fetchList() {
     const res = await fetch("https://fakestoreapi.com/products?limit=5");

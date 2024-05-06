@@ -19,15 +19,14 @@ export default function App() {
             }}
         >
             <Tabs.Screen
-                name="home"
+                name="(line)"
                 options={{
                     title: "Home",
                     tabBarActiveTintColor: "#542678",
                     tabBarIcon: ({ color }) => (
                         <AntDesign name="home" size={30} color={color} />
                     ),
-                    headerShown: true,
-                    header: () => <HomeHeader />,
+                    headerShown: false,
                 }}
             />
             <Tabs.Screen

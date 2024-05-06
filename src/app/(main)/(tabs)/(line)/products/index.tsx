@@ -4,7 +4,7 @@ import { SafeAreaView } from "react-native";
 import { Link } from "expo-router";
 import { useQuery } from "@tanstack/react-query";
 import { AntDesign } from "@expo/vector-icons";
-import ProdCard from "../../../components/products/ProdCard";
+import ProdCard from "../../../../../components/products/ProdCard";
 import { FlatList } from "react-native";
 
 async function fetchList() {
@@ -25,7 +25,6 @@ export default function Index() {
 
     return (
         <SafeAreaView style={{ flex: 1 }} className="p-3">
-            <Text className="text-2xl font-bold">All Products</Text>
             {data && (
                 <FlatList
                     style={{ flex: 1, marginTop: 20 }}

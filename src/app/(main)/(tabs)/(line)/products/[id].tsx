@@ -1,9 +1,10 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import { Image, ScrollView } from "react-native";
 import { useLocalSearchParams } from "expo-router";
-import { useCartStore } from "../../../lib/store";
+import { useCartStore } from "../../../../../lib/store";
 import { useQuery } from "@tanstack/react-query";
 import Toast from "react-native-toast-message";
+import { AntDesign } from "@expo/vector-icons";
 
 async function fetchProduct(id: string) {
     const res = await fetch(`https://fakestoreapi.com/products/${id}`);
@@ -67,12 +68,14 @@ export default function App() {
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                    className="p-3 rounded-xl border "
+                    className="p-3 rounded-xl border flex flex-row justify-center items-center"
+                    style={{gap: 10}}
                     onPress={() => {
                         addItem(data);
                         showToast();
                     }}
                 >
+                    <AntDesign name="shoppingcart" size={30} />
                     <Text className="text-center text-lg">Add To Cart</Text>
                 </TouchableOpacity>
             </View>
