@@ -3,6 +3,7 @@ import { Stack } from "expo-router";
 import HomeHeader from "../../../../components/headers/HomeHeader";
 
 export default function login({}) {
+    
     return (
         <Stack>
             <Stack.Screen

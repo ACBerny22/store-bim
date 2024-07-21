@@ -1,11 +1,6 @@
-import { StatusBar } from "expo-status-bar";
-import { Text, View, Image, TouchableOpacity } from "react-native";
-import { SafeAreaView } from "react-native";
-import { Link } from "expo-router";
+import { SafeAreaView, FlatList, Text } from "react-native";
 import { useQuery } from "@tanstack/react-query";
-import { AntDesign } from "@expo/vector-icons";
 import ProdCard from "../../../../../components/products/ProdCard";
-import { FlatList } from "react-native";
 
 async function fetchList() {
     const res = await fetch("https://fakestoreapi.com/products");
@@ -14,14 +9,12 @@ async function fetchList() {
 }
 
 export default function Index() {
-    const { data, status, isLoading } = useQuery({
+    const { data, isLoading } = useQuery({
         queryKey: ["products"],
         queryFn: fetchList,
     });
 
-    if (isLoading) {
-        return <Text>Loading...</Text>;
-    }
+    if (isLoading) return <Text>Loading...</Text>;
 
     return (
         <SafeAreaView style={{ flex: 1 }} className="p-3">

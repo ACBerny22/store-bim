@@ -7,10 +7,12 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 export default function HomeHeader() {
     return (
         <SafeAreaView className="">
-            <View className="flex bg-slate-100 flex-row items-center px-3 pt-5 justify-between">
-                <Text className="text-semibold text-zinc-600">Mauricio Fortuna</Text>
+            <View className="flex bg-zinc-100 flex-row items-center px-3 pt-5 justify-between">
+                <Text className="text-semibold text-zinc-600">
+                    Mauricio Fortuna
+                </Text>
             </View>
-            <View className="flex bg-slate-100 flex-row items-center px-3 pt-2 justify-between">
+            <View className="flex bg-zinc-100 flex-row items-center px-3 pt-2 justify-between">
                 <Text className="text-3xl font-bold">Welcome Back!!</Text>
                 <Ionicons name="notifications" size={28} color="black" />
             </View>

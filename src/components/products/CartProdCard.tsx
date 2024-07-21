@@ -4,7 +4,7 @@ import { Link } from "expo-router";
 import { useNavigation } from "expo-router";
 import { router } from "expo-router";
 
-interface PopProdCardProps {
+interface CartCardProps {
     product: {
         id: number;
         title: string;
@@ -14,10 +14,11 @@ interface PopProdCardProps {
             rate: number;
             count: number;
         };
+        quantity: number;
     };
 }
 
-export default function CartProdCard({ product }: PopProdCardProps) {
+export default function CartProdCard({ product }: CartCardProps) {
     return (
         <View
             className="flex flex-row  p-5 rounded-xl bg-white mb-5"
@@ -51,7 +52,7 @@ export default function CartProdCard({ product }: PopProdCardProps) {
                         className="text-zinc-500 flex items-center justify-start"
                         style={{ gap: 5 }}
                     >
-                        Quantity: 1
+                        Quantity: {product.quantity}
                     </Text>
                 </View>
                 <View className="flex">

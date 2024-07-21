@@ -1,7 +1,5 @@
 import { Image, View, Text, TouchableOpacity } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
-import { Link } from "expo-router";
-import { useNavigation } from "expo-router";
 import { router } from "expo-router";
 
 interface PopProdCardProps {
